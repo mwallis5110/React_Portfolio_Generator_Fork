@@ -62,6 +62,7 @@ export default function Preview({
 
     <div>
       <Card>
+        <h4>About Me</h4>
         <h6>
           {aboutMe.firstName} {aboutMe.lastName}
         </h6>
@@ -73,6 +74,7 @@ export default function Preview({
         {edu.map((data) => {
           return (
             <div>
+              <h4>Education</h4>
               <h6>{data.institution}</h6>
               <h6>{data.degree}</h6>
               <h6>{data.graduationDate}</h6>
@@ -87,6 +89,7 @@ export default function Preview({
             ? skills[0].map((data) => {
                 return (
                   <div>
+                    <h4>Skills</h4>
                     <h6>{data}</h6>
                   </div>
                 );
@@ -132,6 +135,7 @@ export default function Preview({
         {exp.map((data) => {
           return (
             <div>
+              <h4>Experience</h4>
               <h6>{data.jobTitle}</h6>
               <h6>{data.jobDescription}</h6>
               <h6>{data.startDate}</h6>
@@ -147,6 +151,7 @@ export default function Preview({
         {projects.map((data) => {
           return (
             <div>
+              <h4>Projects</h4>
               <h6>{data.title}</h6>
               <h6>{data.description}</h6>
               <h6>{data.link}</h6>
@@ -157,6 +162,7 @@ export default function Preview({
 
       {/* Contact Info */}
       <Card>
+        <h4>Contact Info</h4>
         <h6>{contact.phone}</h6>
         <h6>{contact.linkedIn}</h6>
         <h6>{contact.github}</h6>

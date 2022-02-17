@@ -63,6 +63,7 @@ export default function App() {
             <Route exact path="/" component={Portfolio} />
             <Route exact path="/conditionals" component={Conditionals} />
             <Route exact path="/portfolio/:email" component={Public} />
+            <Route exact path="/preview" component={Preview} />
           </Switch>
         )}
       </Router>
