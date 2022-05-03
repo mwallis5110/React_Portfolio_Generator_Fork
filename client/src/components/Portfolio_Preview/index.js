@@ -62,6 +62,7 @@ export default function Preview({
 
     <div>
       <Card>
+        <h3>About Me</h3>
         <h6>
           {aboutMe.firstName} {aboutMe.lastName}
         </h6>
@@ -70,6 +71,7 @@ export default function Preview({
 
       {/* Education info */}
       <Card>
+        <h3>Education</h3>
         {edu.map((data) => {
           return (
             <div>
@@ -82,53 +84,53 @@ export default function Preview({
       </Card>
 
       {/* Skills info */}
-        <Card>
-          {skills[0]
-            ? skills[0].map((data) => {
-                return (
-                  <div>
-                    <h6>{data}</h6>
-                  </div>
-                );
-              })
-            : null}
-        </Card>
-        <Card>
-          {skills[1]
-            ? skills[1].map((data) => {
-                return (
-                  <div>
-                    <h6>{data}</h6>
-                  </div>
-                );
-              })
-            : null}
-        </Card>
-        <Card>
-          {skills[2]
-            ? skills[2].map((data) => {
-                return (
-                  <div>
-                    <h6>{data}</h6>
-                  </div>
-                );
-              })
-            : null}
-        </Card>
-        <Card>
-          {skills[3]
-            ? skills[3].map((data) => {
-                return (
-                  <div>
-                    <h6>{data}</h6>
-                  </div>
-                );
-              })
-            : null}
-        </Card>
+      <Card>
+        <h3>Skills</h3>
+        <h5>Spoken Languages</h5>
+        {skills[0]
+          ? skills[0].map((data) => {
+              return (
+                <div>
+                  <h6>{data}</h6>
+                </div>
+              );
+            })
+          : null}
+        <h5>Programming Languages</h5>
+        {skills[1]
+          ? skills[1].map((data) => {
+              return (
+                <div>
+                  <h6>{data}</h6>
+                </div>
+              );
+            })
+          : null}
+        <h5>Hard Skills</h5>
+        {skills[2]
+          ? skills[2].map((data) => {
+              return (
+                <div>
+                  <h6>{data}</h6>
+                </div>
+              );
+            })
+          : null}
+        <h5>Soft Skills</h5>
+        {skills[3]
+          ? skills[3].map((data) => {
+              return (
+                <div>
+                  <h6>{data}</h6>
+                </div>
+              );
+            })
+          : null}
+      </Card>
 
       {/* Experience Info */}
       <Card>
+        <h3>Experience</h3>
         {exp.map((data) => {
           return (
             <div>
@@ -144,6 +146,7 @@ export default function Preview({
 
       {/* Projects Info */}
       <Card>
+        <h3>Projects</h3>
         {projects.map((data) => {
           return (
             <div>
@@ -157,6 +160,7 @@ export default function Preview({
 
       {/* Contact Info */}
       <Card>
+        <h3>Contact</h3>
         <h6>{contact.phone}</h6>
         <h6>{contact.linkedIn}</h6>
         <h6>{contact.github}</h6>

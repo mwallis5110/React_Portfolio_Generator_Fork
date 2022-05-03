@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { useParams } from "react-router-dom";
 import "./public.css";
-import Particles from 'react-particles-js';
+import { tsParticles } from "tsparticles-engine";
 
 export default function Public() {
   const { email } = useParams();
@@ -25,13 +25,23 @@ export default function Public() {
     window.location.replace(link);
   };
 
+  const Particles = tsParticles;
+
   console.log(port.AboutMe);
   return (
     <div classname="particleDiv">
-      <Particles params={{particles: {number: {value: 70,density: {enable: true,value_area: 1000,}},},}}/>
+      <Particles
+        params={{
+          particles: {
+            number: { value: 70, density: { enable: true, value_area: 1000 } },
+          },
+        }}
+      />
       {info.AboutMe ? (
         <div className="portfolioDiv">
-          <a href="/"><img src="/icons/home.png"></img></a>
+          <a href="/">
+            <img src="/icons/home.png"></img>
+          </a>
           <h3 className="aboutMeHeader">
             <span>About Me</span>
           </h3>
@@ -88,11 +98,62 @@ export default function Public() {
 
           <div className="container">
             <footer className="footer">
-                <div target="_blank" onClick={() => {handleLink("//"+info.ContactMe.github)}}><img src="/icons/github.png" className = "icon" alt="Github"></img></div>
-                <div onClick={() => {handleLink("//"+info.ContactMe.linkedIn)}}><img src="/icons/linkedIn.png" className = "icon" alt="LinkedIn"></img></div>
-                <div onClick={() => {handleLink("//"+info.ContactMe.facebook)}}><img src = "/icons/facebook.png" className = "icon" alt="Facebook"></img></div>
-                <div onClick={() => {handleLink("//"+info.ContactMe.instagram)}}><img src = "/icons/instagram.png" className = "icon" alt="Instagram"></img></div>
-                <div onClick={() => {handleLink("//"+info.ContactMe.twitter)}}><img src = "/icons/twitter.png" className = "icon" alt="Twitter"></img></div>
+              <div
+                target="_blank"
+                onClick={() => {
+                  handleLink("//" + info.ContactMe.github);
+                }}
+              >
+                <img
+                  src="/icons/github.png"
+                  className="icon"
+                  alt="Github"
+                ></img>
+              </div>
+              <div
+                onClick={() => {
+                  handleLink("//" + info.ContactMe.linkedIn);
+                }}
+              >
+                <img
+                  src="/icons/linkedIn.png"
+                  className="icon"
+                  alt="LinkedIn"
+                ></img>
+              </div>
+              <div
+                onClick={() => {
+                  handleLink("//" + info.ContactMe.facebook);
+                }}
+              >
+                <img
+                  src="/icons/facebook.png"
+                  className="icon"
+                  alt="Facebook"
+                ></img>
+              </div>
+              <div
+                onClick={() => {
+                  handleLink("//" + info.ContactMe.instagram);
+                }}
+              >
+                <img
+                  src="/icons/instagram.png"
+                  className="icon"
+                  alt="Instagram"
+                ></img>
+              </div>
+              <div
+                onClick={() => {
+                  handleLink("//" + info.ContactMe.twitter);
+                }}
+              >
+                <img
+                  src="/icons/twitter.png"
+                  className="icon"
+                  alt="Twitter"
+                ></img>
+              </div>
             </footer>
           </div>
         </div>
