@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { useParams } from "react-router-dom";
 import "./public.css";
-import { tsParticles } from "tsparticles-engine";
+// import { tsParticles } from "tsparticles-engine";
 
 export default function Public() {
   const { email } = useParams();
@@ -25,18 +25,18 @@ export default function Public() {
     window.location.replace(link);
   };
 
-  const Particles = tsParticles;
+  // const Particles = tsParticles;
 
   console.log(port.AboutMe);
   return (
     <div classname="particleDiv">
-      <Particles
+      {/* <Particles
         params={{
           particles: {
             number: { value: 70, density: { enable: true, value_area: 1000 } },
           },
         }}
-      />
+      /> */}
       {info.AboutMe ? (
         <div className="portfolioDiv">
           <a href="/">
@@ -66,7 +66,7 @@ export default function Public() {
           })}
           <h3 className="skillsHeader">Skills</h3>
           <div className="section-contact section-card section-card-skills">
-            {/* <h6>Languages: {info.Skills.languages}</h6> */}
+            <h6>Languages: {info.Skills.languages}</h6>
             <h6>Programming Languages: {info.Skills.programmingLanguages}</h6>
             <h6>Hard Skills: {info.Skills.hardSkills}</h6>
             <h6>Soft Skills: {info.Skills.softSkills}</h6>

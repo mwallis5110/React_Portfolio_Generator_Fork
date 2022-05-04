@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Card, Button } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import { useParams } from "react-router";
 import Axios from "axios";
 import "./preview.css";
